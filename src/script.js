@@ -15,9 +15,10 @@ var HttpClient = function () {
 
 var getCategories = function (){
     var client = new HttpClient();
+    let apiKey = $("#apiKey").val();
     let api_ = YOUTUBE_API + "videoCategories"+
         "?part=snippet"+
-        "&key=AIzaSyChqRwk7UKteEeqqXBeH8sW6rfdiHNRk2A" +
+        "&key="+apiKey +
         "&regionCode=TR";
     client.get(api_, function (response) {
 
@@ -36,6 +37,8 @@ var getCategories = function (){
 
 var getThumbnails = function (){
     let selectedCategory = $("#category").val();
+    let apiKey = $("#apiKey").val();
+
     if(!isNaN(selectedCategory)){
         selectedCategory=27;
     }
@@ -43,7 +46,7 @@ var getThumbnails = function (){
         "?part=snippet" +
         "&maxResults=50" +
         "&type=video&fields=items(id/videoId,snippet(channelId,channelTitle,description,title,thumbnails)),nextPageToken,pageInfo,prevPageToken,regionCode" +
-        "&key=AIzaSyChqRwk7UKteEeqqXBeH8sW6rfdiHNRk2A" +
+        "&key="+apiKey +
         // "&regionCode=TR"+
         "&videoCategoryId="+selectedCategory+
         "&publishedAfter=2020-01-01T00%3A00%3A00Z"+
@@ -67,6 +70,6 @@ $("#get-result-btn").click(function () {
     getThumbnails();
 });
 
-
-getCategories();
-getThumbnails();
+$("#get-categories-btn").click(function (){
+    getCategories();
+})
