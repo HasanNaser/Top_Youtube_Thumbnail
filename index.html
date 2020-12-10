@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style.css">
+
+    <title>Top Youtube Videos Thumbnails</title>
+</head>
+<body>
+
+
+        <div style="width: 40%; margin: auto; text-align: center">
+            <br>
+            <h1>Top Youtube Videos Thumbnails</h1>
+            <p>The thumbnails of the most viewed videos posted after 01-01-2020<br>*click above image to download it</p>
+            <br>
+            <div style="text-align: left!important; width: 65%"  >
+                <small>To get youtube api key visit : <a href="https://developers.google.com/youtube/v3/getting-started" target="_blank">https://developers.google.com/youtube/v3/getting-started</a></small>
+
+                <input type="text" class="form-control" id="apiKey" placeholder="Enter Your APİ Key ...">
+            </div>
+            <br>
+            <div style="text-align: left">
+                <small style="display: block">Select Category</small>
+                <select class="form-control" name="" id="category" style="    display: inline;width: 68%;"></select>
+                <button id="get-categories-btn" class="btn btn-primary btn-sm">Get Categories</button>
+            </div>
+
+            <br>
+
+            <br>
+            <button id="get-result-btn" class="btn btn-danger btn-lg">Search</button>
+
+        </div>
+
+<div id="result" style=" margin: 1% 2%; text-align: center">
+
+
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script SRC="src/script.js"></script>
+</body>
+</html>
