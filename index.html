@@ -19,8 +19,20 @@
             <h1>Top Youtube Videos Thumbnails</h1>
             <p>The thumbnails of the most viewed videos posted after 01-01-2020<br>*click above image to download it</p>
             <br>
-            <small>Select Category</small>
-            <select class="form-control" name="" id="category"></select>
+            <div style="text-align: left!important; width: 65%"  >
+                <small>To get youtube api key visit : <a href="https://developers.google.com/youtube/v3/getting-started" target="_blank">https://developers.google.com/youtube/v3/getting-started</a></small>
+
+                <input type="text" class="form-control" id="apiKey" placeholder="Enter Your APİ Key ...">
+            </div>
+            <br>
+            <div style="text-align: left">
+                <small style="display: block">Select Category</small>
+                <select class="form-control" name="" id="category" style="    display: inline;width: 68%;"></select>
+                <button id="get-categories-btn" class="btn btn-primary btn-sm">Get Categories</button>
+            </div>
+
+            <br>
+
             <br>
             <button id="get-result-btn" class="btn btn-danger btn-lg">Search</button>
 
@@ -39,4 +51,4 @@
 
 <script SRC="src/script.js"></script>
 </body>
-</html>
+</html> 
